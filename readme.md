@@ -1,6 +1,9 @@
 #arteigenschaften.ch, Strukturanpassung
 
-Taxonomien sind wie Eigenschaftensammlungen und Beziehungssammlungen ein Array
+Neu ist v.a.:
+
+- Taxonomien sind wie Eigenschaftensammlungen und Beziehungssammlungen ein Array
+- Jede Taxonomie beschreibt in den Eigenschaften die hierarchiesche Position ihres Objekts
 
 Vorläufig alte Strukturen belassen, bis:
 
