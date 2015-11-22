@@ -3,14 +3,26 @@
 const couchPass = require('./couchPass.json')
 const url = `http://${couchPass.user}:${couchPass.pass}@127.0.0.1:5984`
 const nano = require('nano')(url)
-const adb = nano.db.use('artendb')
+const aeDb = nano.db.use('ae')
 const _ = require('lodash')
 
-adb.view('artendb', 'objekte', {
+let docsWritten = 0
+
+function bulkSave (docs) {
+  let bulk = {}
+  bulk.docs = docs
+  aeDb.bulk(bulk, function (error, result) {
+    if (error) return console.log('error after bulk:', error)
+    docsWritten = docsWritten + docs.length
+    console.log('docsWritten', docsWritten)
+  })
+}
+
+aeDb.view('artendb', 'objekte', {
   'include_docs': true
 }, (error, body) => {
   if (error) return console.log(error)
-  adb.view('artendb', 'dsMetadataNachDsName', {
+  aeDb.view('artendb', 'dsMetadataNachDsName', {
     'include_docs': true
   }, function (err, body) {
     if (err) return console.log(err)
@@ -19,6 +31,7 @@ adb.view('artendb', 'objekte', {
     const taxMetadata = _.indexBy(taxMetadataArray, 'Name')
 
     let docs = []
+    let docsPrepared = 0
 
     // loop through docs
     body.rows.forEach((row, index) => {
@@ -62,21 +75,15 @@ adb.view('artendb', 'objekte', {
         neueTax.Eigenschaften = neueTax.Eigenschaften
         doc.Taxonomien = [neueTax]
         docs.push(doc)
+
+        if ((docs.length > 600) || (index === body.rows.length - 1)) {
+          docsPrepared = docsPrepared + docs.length
+          console.log('docsPrepared', docsPrepared)
+          // save 600 docs
+          bulkSave(docs.splice(0, 600))
+        }
       } else {
         console.log('doc ' + doc._id + ' has no Gruppe or no Taxonomie')
-      }
-    })
-
-    // bulk-Format aufbauen
-    var bulk = {}
-    bulk.docs = docs
-
-    // alle Updates in einem mal durchführen
-    adb.bulk(bulk, function (error, result) {
-      if (error) {
-        console.log('error after bulk:', error)
-      } else {
-        console.log(docs.length + ' Objekte aktualisiert. Result from bulk:', result)
       }
     })
   })
