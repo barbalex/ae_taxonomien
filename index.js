@@ -1,10 +1,39 @@
 'use strict'
 
+/*
+ * Objekt neu aufbauen
+ * damit die Reihenfolge passt und die Taxonomie die Gruppe enthält
+ * Reihenfolge:
+ * 1. Taxonomie
+ * 2. Taxonomien
+ * 3. Eigenschaftensammlungen
+ * 4. Beziehungssammlungen
+ */
+
 const couchPass = require('./couchPass.json')
 const url = `http://${couchPass.user}:${couchPass.pass}@127.0.0.1:5984`
 const nano = require('nano')(url)
 const aeDb = nano.db.use('ae')
 const _ = require('lodash')
+
+const hierarchyFieldsOfGroups = [
+  {
+    'name': 'Fauna',
+    'hierarchyFields': ['Klasse', 'Ordnung', 'Familie', 'Gattung']
+  },
+  {
+    'name': 'Flora',
+    'hierarchyFields': ['Familie', 'Gattung']
+  },
+  {
+    'name': 'Moose',
+    'hierarchyFields': ['Klasse', 'Familie', 'Gattung']
+  },
+  {
+    'name': 'Macromycetes',
+    'hierarchyFields': ['Gattung']
+  }
+]
 
 let docsWritten = 0
 
@@ -18,73 +47,79 @@ function bulkSave (docs) {
   })
 }
 
-aeDb.view('artendb', 'objekte', {
+aeDb.view('objects', 'objects', {
   'include_docs': true
 }, (error, body) => {
   if (error) return console.log(error)
-  aeDb.view('artendb', 'dsMetadataNachDsName', {
-    'include_docs': true
-  }, function (err, body) {
-    if (err) return console.log(err)
-    // extract metadata doc from result
-    const taxMetadataArray = body.rows.map((row) => row.doc)
-    const taxMetadata = _.indexBy(taxMetadataArray, 'Name')
 
-    let docs = []
-    let docsPrepared = 0
+  let docs = []
+  let docsPrepared = 0
 
-    // loop through docs
-    body.rows.forEach((row, index) => {
-      const doc = row.doc
-      if (doc.Gruppe && doc.Taxonomie && doc.Taxonomie.Eigenschaften) {
-        let neueTax = _.cloneDeep(doc.Taxonomie)
-        if (doc.Gruppe === 'Lebensräume' && neueTax.Eigenschaften.Parent) {
-          if (!neueTax.Eigenschaften.Parent) {
-            console.log('lr ' + doc._id + ' hat keinen Parent')
-          } else if (!neueTax.Eigenschaften.Hierarchie) {
-            console.log('lr ' + doc._id + ' hat keine Hierarchie')
-          } else {
-            delete neueTax.Eigenschaften.Parent
-          }
+  // loop through docs
+  body.rows.forEach((row, index) => {
+    const doc = row.doc
+    if (doc.Gruppe && doc.Taxonomie && doc.Taxonomie.Eigenschaften) {
+      let neueTax = _.cloneDeep(doc.Taxonomie)
+      if (doc.Gruppe === 'Lebensräume' && neueTax.Eigenschaften.Parent) {
+        // lr: remove parent. Only keep Hierarchie
+        if (!neueTax.Eigenschaften.Parent) {
+          console.log('lr ' + doc._id + ' hat keinen Parent')
+        } else if (!neueTax.Eigenschaften.Hierarchie) {
+          console.log('lr ' + doc._id + ' hat keine Hierarchie')
         } else {
-          // this is a species
-          let hierarchie = []
-          const metaData = taxMetadata[doc.Taxonomie.Name]
-          if (metaData) {
-            if (metaData.HierarchieFelder) {
-              _.forEach(metaData.HierarchieFelder, (feld, index) => {
-                if (neueTax.Eigenschaften[feld]) {
-                  if (index + 1 === metaData.HierarchieFelder.length) {
-                    hierarchie.push({
-                      'Name': neueTax.Eigenschaften['Artname vollständig'],
-                      'GUID': doc._id
-                    })
-                  } else {
-                    hierarchie.push({
-                      'Name': neueTax.Eigenschaften[feld]
-                    })
-                  }
-                }
-              })
-              neueTax.Eigenschaften.Hierarchie = hierarchie
-            }
-          } else {
-            console.log('doc ' + doc._id + ' has no metaData')
-          }
-        }
-        neueTax.Eigenschaften = neueTax.Eigenschaften
-        doc.Taxonomien = [neueTax]
-        docs.push(doc)
-
-        if ((docs.length > 600) || (index === body.rows.length - 1)) {
-          docsPrepared = docsPrepared + docs.length
-          console.log('docsPrepared', docsPrepared)
-          // save 600 docs
-          bulkSave(docs.splice(0, 600))
+          delete neueTax.Eigenschaften.Parent
         }
       } else {
-        console.log('doc ' + doc._id + ' has no Gruppe or no Taxonomie')
+        // this is a species
+        // need to build Hierarchie
+        let hierarchy = []
+        const metaData = hierarchyFieldsOfGroups[doc.Gruppe]
+        if (metaData && metaData.hierarchyFields) {
+          const hierarchyFields = metaData.hierarchyFields
+          hierarchyFields.forEach((field, index) => {
+            if (neueTax.Eigenschaften[field]) {
+              if (index + 1 === hierarchyFields.length) {
+                hierarchy.push({
+                  'Name': neueTax.Eigenschaften['Artname vollständig'],
+                  'GUID': doc._id
+                })
+              } else {
+                hierarchy.push({
+                  'Name': neueTax.Eigenschaften[field]
+                })
+              }
+            }
+          })
+          neueTax.Eigenschaften.Hierarchie = hierarchy
+        } else {
+          console.log('doc ' + doc._id + ' has no metaData')
+        }
       }
-    })
+      // set this taxonomy as standard
+      neueTax.Standardtaxonomie = true
+      // now manipulate order of properties
+      // first clone es and bs
+      const newEs = _.cloneDeep(doc.Eigenschaftensammlungen)
+      const newBs = _.cloneDeep(doc.Beziehungssammlungen)
+      // remove old versions
+      delete doc.Taxonomie
+      if (doc.Eigenschaftensammlungen) delete doc.Eigenschaftensammlungen
+      if (doc.Beziehungssammlungen) delete doc.Beziehungssammlungen
+      // now add in wanted order
+      doc.Taxonomien = [neueTax]
+      doc.Eigenschaftensammlungen = newEs
+      doc.Beziehungssammlungen = newBs
+
+      docs.push(doc)
+
+      if ((docs.length > 600) || (index === body.rows.length - 1)) {
+        docsPrepared = docsPrepared + docs.length
+        console.log('docsPrepared', docsPrepared)
+        // save 600 docs
+        bulkSave(docs.splice(0, 600))
+      }
+    } else {
+      console.log('doc ' + doc._id + ' has no Gruppe or no Taxonomie')
+    }
   })
 })
