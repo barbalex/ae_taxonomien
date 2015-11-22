@@ -61,9 +61,8 @@ aeDb.view('objects', 'objects', {
         // this is a species
         // need to build Hierarchie
         let hierarchy = []
-        const metaData = hierarchyFieldsOfGroups[doc.Gruppe]
-        if (metaData && metaData.hierarchyFields) {
-          const hierarchyFields = metaData.hierarchyFields
+        const hierarchyFields = hierarchyFieldsOfGroups[doc.Gruppe]
+        if (hierarchyFields) {
           hierarchyFields.forEach((field, index) => {
             if (neueTax.Eigenschaften[field]) {
               if (index + 1 === hierarchyFields.length) {
@@ -80,7 +79,7 @@ aeDb.view('objects', 'objects', {
           })
           neueTax.Eigenschaften.Hierarchie = hierarchy
         } else {
-          console.log('doc ' + doc._id + ' has no metaData')
+          console.log('doc ' + doc._id + ' has no hierarchyFields')
         }
       }
       // set this taxonomy as standard
