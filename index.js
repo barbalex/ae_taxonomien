@@ -16,24 +16,12 @@ const nano = require('nano')(url)
 const aeDb = nano.db.use('ae')
 const _ = require('lodash')
 
-const hierarchyFieldsOfGroups = [
-  {
-    'name': 'Fauna',
-    'hierarchyFields': ['Klasse', 'Ordnung', 'Familie', 'Gattung']
-  },
-  {
-    'name': 'Flora',
-    'hierarchyFields': ['Familie', 'Gattung']
-  },
-  {
-    'name': 'Moose',
-    'hierarchyFields': ['Klasse', 'Familie', 'Gattung']
-  },
-  {
-    'name': 'Macromycetes',
-    'hierarchyFields': ['Gattung']
-  }
-]
+const hierarchyFieldsOfGroups = {
+  Fauna: ['Klasse', 'Ordnung', 'Familie', 'Gattung'],
+  Flora: ['Familie', 'Gattung'],
+  Moose: ['Klasse', 'Familie', 'Gattung'],
+  Macromycetes: ['Gattung']
+}
 
 let docsWritten = 0
 
