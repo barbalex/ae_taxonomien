@@ -17,10 +17,10 @@ const aeDb = nano.db.use('ae')
 const _ = require('lodash')
 
 const hierarchyFieldsOfGroups = {
-  Fauna: ['Klasse', 'Ordnung', 'Familie', 'Gattung'],
-  Flora: ['Familie', 'Gattung'],
-  Moose: ['Klasse', 'Familie', 'Gattung'],
-  Macromycetes: ['Gattung']
+  'Fauna': ['Klasse', 'Ordnung', 'Familie', 'Gattung'],  // hat funktioniert
+  'Flora': ['Familie', 'Gattung'],                       // Gattung fehlt!
+  'Moose': ['Klasse', 'Familie', 'Gattung'],             // Gattung fehlt!
+  'Macromycetes': ['Gattung']                            // Gattung fehlt!
 }
 
 let docsWritten = 0
@@ -65,17 +65,18 @@ aeDb.view('objects', 'objects', {
         if (hierarchyFields) {
           hierarchyFields.forEach((field, index) => {
             if (neueTax.Eigenschaften[field]) {
-              if (index + 1 === hierarchyFields.length) {
-                hierarchy.push({
-                  'Name': neueTax.Eigenschaften['Artname vollständig'],
-                  'GUID': doc._id
-                })
-              } else {
-                hierarchy.push({
-                  'Name': neueTax.Eigenschaften[field]
-                })
-              }
+              hierarchy.push({
+                'Name': neueTax.Eigenschaften[field]
+              })
+            } else {
+              hierarchy.push({
+                'Name': '(unbekannte ' + field + ')'
+              })
             }
+          })
+          hierarchy.push({
+            'Name': neueTax.Eigenschaften['Artname vollständig'],
+            'GUID': doc._id
           })
           neueTax.Eigenschaften.Hierarchie = hierarchy
         } else {
