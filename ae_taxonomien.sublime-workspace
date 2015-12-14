@@ -1,0 +1,622 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"con",
+				"console"
+			],
+			[
+				"onClick",
+				"onClickRemove"
+			],
+			[
+				"fauna",
+				"faunaL1Klasse"
+			],
+			[
+				"faunaL",
+				"faunaL4Arten"
+			],
+			[
+				"Re",
+				"ResizableBox"
+			],
+			[
+				"ind_auf",
+				"ind_aufg_id"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 3671,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "javasc",
+		"selected_items":
+		[
+			[
+				"javasc",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Controlinstall",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"jsl",
+				"Set Syntax: JavaScript (Rails)"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 74.0,
+		"history":
+		[
+			"import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Alexander/ae_taxonomien"
+	],
+	"file_history":
+	[
+		"/C/Users/Alexander/ae/src/components/main/importRc/importRc.js",
+		"/C/Users/Alexander/ae/src/queries/pcs.js",
+		"/C/Users/Alexander/ae/src/queries/objectsIdsByRcsName.js",
+		"/C/Users/Alexander/ae/src/queries/objectsIdsByPcsName.js",
+		"/C/Users/Alexander/ae/src/queries/mooseById.js",
+		"/C/Users/Alexander/ae/src/queries/macromycetesById.js",
+		"/C/Users/Alexander/ae/src/queries/guidById.js",
+		"/C/Users/Alexander/ae/src/queries/floraById.js",
+		"/C/Users/Alexander/ae/src/queries/fieldsOfGroup.js",
+		"/C/Users/Alexander/ae/src/queries/faunaById.js",
+		"/C/Users/Alexander/ae/src/queries/rcs.js",
+		"/C/Users/Alexander/ae/src/modules/getPathFromGuid.js",
+		"/C/Users/Alexander/ae/src/modules/addPathsFromItemsToLocalPathDb.js",
+		"/C/Users/Alexander/ae/src/components/main/export/panel4/filterCollections.js",
+		"/C/Users/Alexander/ae/src/components/main/export/panel4/buildExportObjects.js",
+		"/C/Users/Alexander/ae/src/modules/buildHierarchy.js",
+		"/C/Users/Alexander/ae/src/components/main/object/object.js",
+		"/C/Users/Alexander/ae/gulp-tasks/sftp.js",
+		"/C/Users/Alexander/ae/src/components/menu/filter.js",
+		"/C/Users/Alexander/ae/src/router.js",
+		"/C/Users/Alexander/ae/src/components/menu/treeNodesFromHierarchyObject.js",
+		"/C/Users/Alexander/ae/src/searchGoogleImages.js",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Alexander/ae/src/modules/setTreeHeight.js",
+		"/C/Users/Alexander/ae/src/styles/main.styl",
+		"/C/Users/Alexander/ae/src/stores.js",
+		"/C/Users/Alexander/ae/package.json",
+		"/C/Users/Alexander/ae/src/styles/ae.css",
+		"/C/Users/Alexander/ae/src/components/menu/filter_old.js",
+		"/C/Users/Alexander/ae/src/dsMetadata.json",
+		"/C/Users/Alexander/ae/src/components/menu/tree/faunaL4Arten.js",
+		"/C/Users/Alexander/ae/src/components/menu/tree/faunaL3Familien.js",
+		"/C/Users/Alexander/ae/src/components/menu/tree/faunaL2Ordnungen.js",
+		"/C/Users/Alexander/ae/src/components/menu/tree/faunaL1Klassen.js",
+		"/C/Users/Alexander/ae/src/actions.js",
+		"/C/Users/Alexander/ae/img/aster.png",
+		"/C/Users/Alexander/ae/src/components/main/main.js",
+		"/C/Users/Alexander/ae/src/components/menu/tree/s1.js",
+		"/C/Users/Alexander/ae/src/routingStructure.js",
+		"/C/Users/Alexander/gs/.gitignore",
+		"/C/Users/Alexander/gs/gulpfile.js",
+		"/C/Users/Alexander/gs/src/pages/kontakt.js",
+		"/C/Users/Alexander/gs/gulp-tasks/sftp.js",
+		"/C/Users/Alexander/gs/src/pages/projekte.js",
+		"/C/Users/Alexander/gs/sftpPass.json",
+		"/C/Users/Alexander/gs/server.js",
+		"/C/Users/Alexander/gs/src/router.js",
+		"/C/Users/Alexander/gs/webpack.config.js",
+		"/C/Users/Alexander/gs/license.md",
+		"/C/Users/Alexander/EvabMobile/License.md",
+		"/C/Users/Alexander/gs/public/server.js",
+		"/C/Users/Alexander/gs/src/modules/showGoogleMap.js",
+		"/C/Users/Alexander/gs/src/200.html",
+		"/C/Users/Alexander/gs/public/index.html",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Alexander/gs/src/layout.js",
+		"/C/Users/Alexander/gs/src/styles/main.css",
+		"/C/Users/Alexander/apflora/src/modules/kontrolliereRelevanzAusserkantonalerTpop.js",
+		"/C/Users/Alexander/apflora/src/modules/isPointInsidePolygon.js",
+		"/D/gd/apflora/create server on digital ocean.txt",
+		"/C/Users/Alexander/apflora/queries/qkView.js",
+		"/C/Users/Alexander/apflora/server.js",
+		"/C/Users/Alexander/apflora/geojson/ktZh.json",
+		"/C/Users/Alexander/apflora/queries/tpopKoordFuerProgramm.js",
+		"/C/Users/Alexander/apflora/src/modules/initiiereApziel.js",
+		"/C/Users/Alexander/apflora/queries/tpopKarte.js",
+		"/C/Users/Alexander/apflora/geojson/chKantone.json",
+		"/C/Users/Alexander/apflora/src/modules/olmap/verorteTPop.js",
+		"/C/Users/Alexander/apflora/src/modules/olmap/createLayers.js",
+		"/C/Users/Alexander/apflora/package.json",
+		"/C/Users/Alexander/apflora/src/modules/olmap/erstelleModifyInteractionFuerVectorLayer.js",
+		"/C/Users/Alexander/apflora/src/modules/olmap/addMeasureInteraction.js",
+		"/C/Users/Alexander/apflora/src/modules/olmap/styleTPop.js",
+		"/C/Users/Alexander/apflora/src/modules/olmap/stylePop.js",
+		"/C/Users/Alexander/apflora/src/modules/olmap/styleBeob.js",
+		"/C/Users/Alexander/apflora/dbPass.json",
+		"/C/Users/Alexander/apflora/sql/viewsGenerieren.sql",
+		"/C/Users/Alexander/apflora/sql/Triggers.sql",
+		"/C/Users/Alexander/apflora/sql/201412migration/addForeignKeys_div.sql",
+		"/C/Users/Alexander/apflora/sql/201412migration/addForeignKeys.sql",
+		"/C/Users/Alexander/apflora/sql/201412migration/dropForeignKeys.sql",
+		"/C/Users/alexander/programme/xampp/phpMyAdmin/config.inc.php",
+		"/C/Users/alexander/programme/xampp_20150223/phpMyAdmin/config.inc.php",
+		"/D/gd/apflora/digita_ocean_apflora.txt",
+		"/D/gd/apflora/dsn/apflora_views.dsn",
+		"/D/gd/apflora/dsn/apflora.dsn",
+		"/D/gd/apflora/dsn/apflora_beob.dsn",
+		"/C/Users/alexander/programme/XAMPP/phpMyAdmin/config.inc.php",
+		"/C/Users/Alexander/apflora/src/modules/setupEvents.js",
+		"/D/gd/apflora_admin/create server on digital ocean.txt",
+		"/C/Users/Alexander/apflora/index.html",
+		"/C/Users/Alexander/apflora/src/modules/erstelleListeDerAusgewaehltenPopTPop.js",
+		"/C/Users/Alexander/apflora/src/modules/events/forms/onClickGuid.js",
+		"/C/Users/Alexander/apflora/src/modules/events/menu/onKeyupClickSuchen.js",
+		"/C/Users/Alexander/apflora/src/modules/undeleteDatensatz.js",
+		"/C/Users/Alexander/apflora/style/apflora.css",
+		"/C/Users/Alexander/apflora/src/modules/frageObUndeleteDatensatz.js",
+		"/C/Users/Alexander/apflora/src/modules/loescheAp.js",
+		"/C/Users/Alexander/apflora/src/modules/events/onClickUndelete.js",
+		"/C/Users/Alexander/apflora/src/modules/events/forms/gMap/onClickGMapDistanzMessenEntfernen.js",
+		"/C/Users/Alexander/apflora/src/modules/events/forms/gMap/onClickGMapDistanzMessen.js",
+		"/C/Users/Alexander/apflora/src/modules/events/forms/beob/onChangeDistZuTPop.js",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Alexander/apflora/src/modules/jstree/erstelleTree.js",
+		"/C/Users/Alexander/apflora/src/modules/initiiereBeob.js",
+		"/C/Users/Alexander/apflora/src/modules/events/forms/beob/onChangeBeobNichtZuordnen.js",
+		"/C/Users/Alexander/apflora/queries/beobKarte.js",
+		"/C/Users/Alexander/apflora/queries/tree/beobNichtZuzuordnen.js",
+		"/C/Users/Alexander/apflora/queries/tree/pop.js",
+		"/C/Users/Alexander/apflora/sql/ViewsGenerieren.sql",
+		"/C/Users/Alexander/apflora/src/modules/oeffneBeob.js",
+		"/C/Users/Alexander/apflora/src/modules/oeffneBeobInNeuemTab.js",
+		"/C/Users/Alexander/apflora/src/modules/events/forms/beob/onChangeBeobNichtBeurteilt.js",
+		"/C/Users/Alexander/apflora/src/modules/events/menu/onClickApWaehlenTextLoeschen.js",
+		"/C/Users/Alexander/apflora/src/modules/events/menu/onChangeApWaehlen.js",
+		"/C/Users/Alexander/apflora/src/modules/events/menu/onClickApLoeschen.js",
+		"/C/Users/Alexander/apflora/src/modules/setzeAutocompleteFuerApliste.js",
+		"/C/Users/Alexander/apflora/src/modules/waehleAp.js",
+		"/C/Users/Alexander/apflora/queries/apliste.js",
+		"/C/Users/Alexander/apflora/src/apflora.js",
+		"/C/Users/Alexander/apflora/src/modules/oeffneUri.js",
+		"/C/Users/Alexander/apflora/src/modules/pruefeAnmeldung.js",
+		"/C/Users/Alexander/apflora/src/modules/pruefeObAngemeldet.js",
+		"/C/Users/Alexander/apflora/src/modules/initiiereAp.js",
+		"/C/Users/Alexander/apflora/src/modules/waehleApliste.js",
+		"/C/Users/Alexander/apflora/src/modules/zeigeFormular.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 117.0,
+		"where_history":
+		[
+			"C:\\Users\\Alexander\\ae, -/C/Users/Alexander/ae/node_modules/*, -routingStructure.js",
+			"C:\\Users\\Alexander\\ae, -/C/Users/Alexander/ae/node_modules/*",
+			"C:\\Users\\Alexander\\ae, -/C/Users/alex/ae/node_modules/*",
+			"C:\\Users\\Alexander\\gs",
+			"C:\\Users\\Alexander\\gabriel",
+			"C:\\Users\\Alexander\\apflora, -apflora_built.js, -apflora_browserified.js, -apflora_built.css, -main_built.css, -jquery-ui.js, -jquery.hotkeys.js, -jquery.js, -jquery.jstree.js, -markerwithlabel.js, -underscore.js, -hammer.js, -jquery-migrate.js, -jquery.cookie.js, -jquery.fileDownload.js, -jquery.hammer.js, -jquery.qtip.js, -jquery.ui.touch-punch.js, -jsuri.js, -markerclusterer.js, -proj4.js, -ruler.js, -ApFloraAdmin.accdb, -workspace.xml, -backbone.js, -alex.xml, -Beziehungen.accdb, -EvabGeoDB_apflora.mdb, -EvabGeoDB_Template.mdb, -apflora.qgs",
+			"C:\\Users\\alex\\apflora, -apflora_built.js, -apflora_browserified.js, -apflora_built.css, -main_built.css, -jquery-ui.js, -jquery.hotkeys.js, -jquery.js, -jquery.jstree.js, -markerwithlabel.js, -underscore.js, -hammer.js, -jquery-migrate.js, -jquery.cookie.js, -jquery.fileDownload.js, -jquery.hammer.js, -jquery.qtip.js, -jquery.ui.touch-punch.js, -jsuri.js, -markerclusterer.js, -proj4.js, -ruler.js, -ApFloraAdmin.accdb, -workspace.xml, -backbone.js, -alex.xml, -Beziehungen.accdb, -EvabGeoDB_apflora.mdb, -EvabGeoDB_Template.mdb, -apflora.qgs",
+			"C:\\Users\\Alexander\\apflora, -apflora_built.js, -apflora_browserified.js, -jquery-ui.js, -jquery.hotkeys.js, -jquery.js, -jquery.jstree.js, -markerwithlabel.js, -underscore.js, -hammer.js, -jquery-migrate.js, -jquery.cookie.js, -jquery.fileDownload.js, -jquery.hammer.js, -jquery.qtip.js, -jquery.ui.touch-punch.js, -jsuri.js, -markerclusterer.js, -proj4.js",
+			"C:\\Users\\alex\\apflora, -apflora_built.js, -apflora_browserified.js, -jquery-ui.js, -jquery.hotkeys.js, -jquery.js, -jquery.jstree.js, -markerwithlabel.js, -underscore.js, -hammer.js, -jquery-migrate.js, -jquery.cookie.js, -jquery.fileDownload.js, -jquery.hammer.js, -jquery.qtip.js, -jquery.ui.touch-punch.js, -jsuri.js, -markerclusterer.js, -proj4.js",
+			"C:\\Users\\Alexander\\apflora",
+			"C:\\Users\\Alexander\\artendb",
+			"C:\\Users\\Alexander\\apflora",
+			"C:\\Users\\Alexander\\artendb_import",
+			"C:\\Users\\Alexander\\EvabMobile",
+			"C:\\Users\\Alexander\\apflora"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Taxonomie",
+			"Taxonomien[0]",
+			"object.Taxonomien[0]",
+			"Taxonomien[0]",
+			"getGuidsById",
+			"getGuidsById.js",
+			"faunaById.js",
+			"Taxonomien[0]",
+			"_",
+			"values",
+			"Glyphicon",
+			"keysOfGroups",
+			"'",
+			"loadingMessage",
+			"that",
+			"faunaL2Ordnung",
+			"faunaL5Objekt",
+			"router",
+			"transition",
+			"hover",
+			"FaunaL5Objekt",
+			"^",
+			"json",
+			"s5",
+			"S3",
+			"s4",
+			"S4",
+			"S4.js",
+			"s4.js",
+			"s3",
+			"S2",
+			"s2",
+			"FaunaTreeLevel1",
+			"s1",
+			"faunaLevel1",
+			"^",
+			"adbWeb03AnzeigenEigenschaftenImg",
+			"kontakt",
+			"raw-loader",
+			"copy-loader",
+			"TemplateArgumentDependency",
+			"kontakt",
+			"google_karte",
+			"container",
+			"navbar",
+			".nav > li > a",
+			"nav",
+			"proj_sidebar",
+			"jquery-ui",
+			"Population: Status ist \"angesiedelt\", es gibt aber eine Teilpopulation mit Status \"urspruenglich\":",
+			"ü",
+			"ö",
+			"ä",
+			"hlung ohne Methode (Freiwilligen-Kontrolle):",
+			"'",
+			"v_qk_tpop_mitstatusansaatversuchundzaehlungmitanzahl",
+			"die (im Berichtjahr) kontrolliert wurden",
+			"Population mit angesiedelten Teilpopulationen",
+			"Population mit angesiedelten Teilpopulationen (vor dem Berichtjahr), die (im Berichtjahr) kontrolliert wurden, aber ohne Populations-Bericht (im Berichtjahr):",
+			"tpop after isInside:",
+			"' > TPop: ', apflora.tpop.TPopId",
+			"queryQkView",
+			"qkView",
+			"data from tpopKoordFuerProgramm:",
+			"v_qk_pop_statusangesiedeltmittpopursprünglich",
+			"nglich AS",
+			"SELECT DISTINCT apflora.pop.ApArtId, 'Population: Status ist \"a",
+			"kontrolliereRelevanzAusserkantonalerTpop",
+			"queryTpopKoordFuerProgramm",
+			"apflora/tabelle=",
+			"queryTabelleSelectApfloraNumber",
+			"tabelleSelectApfloraString",
+			"tabelleSelectApfloraNumber",
+			"queryTabelleSelectApfloraString",
+			"queryTpopInsertKopie",
+			"tpopId",
+			"exportView",
+			"polygonGeojson",
+			"isInsideZh",
+			"zhGeojson",
+			"\"type\":\"Feature\"",
+			"Zürich",
+			"drawend",
+			"ol.style.Icon",
+			"ol.source.KML",
+			"ol.source.GPX",
+			"ol.source.GML",
+			"ol.source.GeoJSON",
+			"ol.dom.Input",
+			"bindTo",
+			"tpopHerkunft",
+			"domPopHerkunft_1",
+			"v_exportevab_beob",
+			"AdrId",
+			"'delete'",
+			"150",
+			"v_exportevab",
+			"gMapDetailplaeneCheckbox",
+			"export_tpop",
+			"tpop_id_liste",
+			"export_kontr",
+			"exportPop",
+			"pop_id_liste",
+			"export_pop",
+			"onClickKopiereKoordinatenInPop",
+			"undelete_div",
+			"undeleteDatensatz",
+			"removeruler",
+			"addruler",
+			"DistZuTPop",
+			"data.beobNichtZuordnen",
+			"BeobNichtZuordnen",
+			"onChangeBeobNichtBeurteilt",
+			"BeobNichtBeurteilt",
+			"waehleAp",
+			"ap_waehlen_text_loeschen",
+			"waehleAp",
+			"loescheAp",
+			"programm_alle",
+			"anmeldung_rueckmeldung",
+			"anmelde_dialog",
+			"programm_ap",
+			"programm_neu",
+			"programm_wahl_checked",
+			"exportieren_1",
+			"exportieren_2",
+			"anmeldung_passwort",
+			"anmeldung_name"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"standardtaxonomie",
+			"valuesOfGroups",
+			"\"",
+			"faunaL1Klasse",
+			"faunaL5Objekt",
+			"",
+			"FaunaL5Objekt",
+			"FaunaL3Familien",
+			"faunaL4Art",
+			"FaunaL4Arten",
+			"faunaL4Arten.js",
+			"faunaL3Familie",
+			"faunaL3Familien",
+			"FaunaL2Ordnungen",
+			"faunaL2Ordnung",
+			"FaunaL2Ordnungen",
+			"faunaL2Ordnung",
+			"FaunaL2Ordnungen",
+			"FaunaL1Klassen",
+			"faunaL1Klassen",
+			"",
+			"ue",
+			"ae",
+			"\"",
+			"' > TPop: id=', apflora.tpop.TPopId",
+			"v_qk_pop_statusangesiedeltmittpopurspruenglich",
+			"ApArtId",
+			"polygon",
+			"isInsidePolygon",
+			"polygonGeojson",
+			"tpopHerkunft",
+			"apflora.pop_status_werte",
+			"pop_status_werte",
+			"exportTpop",
+			"tpopIdListe",
+			"exportKontr",
+			"popIdListe",
+			"exportPop",
+			"undeleteDiv",
+			"distZuTPop",
+			"data.BeobNichtZuordnen",
+			"beobNichtZuordnen",
+			"BeobNichtZuordnen",
+			"beobNichtBeurteilt",
+			"apWaehlenTextLoeschen",
+			"programmAlle",
+			"anmeldungRueckmeldung",
+			"anmeldeDialog",
+			"programmAp",
+			"programmNeu",
+			"programmWahlChecked",
+			"exportieren1",
+			"exportieren2",
+			"anmeldungPasswort",
+			"anmeldungName",
+			"apWaehlenText",
+			"testartDiv",
+			"formsTitelzeile",
+			"apWaehlen",
+			"apLoeschen",
+			"programmWahl",
+			"data.BerURL",
+			"'",
+			"url",
+			"berUrl",
+			"../../../../",
+			"../../../",
+			"events/olMap/layertree",
+			"localStorage[",
+			"localStorage.apf[",
+			"window.apf.tpopfreiwkontrObjektKopiert",
+			"window.apf.tpopfeldkontrObjektKopiert",
+			"chToWgsLng",
+			"chToWgsLat",
+			"chToWgsLng",
+			"chToWgslat",
+			"doc",
+			"Datensammlung.Link",
+			"DatensammlungDieserArt.Link",
+			"DsGueltigeNamen.Link",
+			"DsSynonyme.Link",
+			"Art.Taxonomie.Link",
+			"2013",
+			"tab_aufgaben_berichte",
+			"tab_projekte_berichte",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3671,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1593.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ae_taxonomien.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 792.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 354.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
