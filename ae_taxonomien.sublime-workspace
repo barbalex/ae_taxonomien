@@ -38,6 +38,14 @@
 				"buffer_size": 3671,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "/C/Users/alex/ae_structure_v1_to_v3/.gitignore",
+			"settings":
+			{
+				"buffer_size": 663,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -106,10 +114,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Alexander/ae_taxonomien"
+		"/C/Users/alex/ae_taxonomien"
 	],
 	"file_history":
 	[
+		"/C/Users/alex/ae_taxonomien/.gitignore",
 		"/C/Users/Alexander/ae/src/components/main/importRc/importRc.js",
 		"/C/Users/Alexander/ae/src/queries/pcs.js",
 		"/C/Users/Alexander/ae/src/queries/objectsIdsByRcsName.js",
@@ -236,8 +245,7 @@
 		"/C/Users/Alexander/apflora/src/modules/pruefeAnmeldung.js",
 		"/C/Users/Alexander/apflora/src/modules/pruefeObAngemeldet.js",
 		"/C/Users/Alexander/apflora/src/modules/initiiereAp.js",
-		"/C/Users/Alexander/apflora/src/modules/waehleApliste.js",
-		"/C/Users/Alexander/apflora/src/modules/zeigeFormular.js"
+		"/C/Users/Alexander/apflora/src/modules/waehleApliste.js"
 	],
 	"find":
 	{
@@ -501,7 +509,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -528,7 +536,35 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1593.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/alex/ae_structure_v1_to_v3/.gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 663,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								663,
+								663
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 283.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

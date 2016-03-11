@@ -24,3 +24,5 @@ Neu ist v.a.:
           GUID
     Eigenschaftensammlungen
     Beziehungssammlungen
+
+Dieses Projekt kann gelöscht werden, wenn ae_structure_v1_to_v3 fertig ist - es wird davmit ersetzt
